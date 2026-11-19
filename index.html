@@ -55,10 +55,10 @@ input:focus-visible{border-color:var(--azul);box-shadow:0 0 0 4px rgba(47,79,245
 .escolha label{position:relative;display:flex;align-items:center;gap:12px;min-height:58px;padding:10px 16px;border-radius:14px;border:2px solid #D5DBF5;background:#F6F8FF;font-weight:600;font-size:16px;margin:0;cursor:pointer;transition:border-color .15s,background .15s}
 .escolha input{position:absolute;opacity:0;pointer-events:none}
 .escolha .bola{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #9AA3C7;display:grid;place-items:center}
-.escolha label:has(input:checked){border-color:var(--azul);background:#E9EEFF}
-.escolha label:has(input:checked) .bola{border-color:var(--azul)}
-.escolha label:has(input:checked) .bola::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--azul)}
-.escolha label:has(input:focus-visible){box-shadow:0 0 0 4px rgba(47,79,245,.18)}
+.escolha label.marcado{border-color:var(--azul);background:#E9EEFF}
+.escolha label.marcado .bola{border-color:var(--azul)}
+.escolha label.marcado .bola::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--azul)}
+.escolha label:focus-within{box-shadow:0 0 0 4px rgba(47,79,245,.18)}
 button{width:100%;min-height:62px;margin-top:8px;border:0;border-radius:999px;background:linear-gradient(135deg,#2B4AF2,#3559FD);color:#fff;font:800 19px Montserrat,sans-serif;cursor:pointer;transition:transform .15s,opacity .15s}
 button:active{transform:scale(.98)}
 button[disabled]{opacity:.6;cursor:wait}
@@ -168,6 +168,10 @@ fone.addEventListener('input', () => {
     : d.length > 6 ? d.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3')
     : d.length > 2 ? d.replace(/(\d{2})(\d{0,5})/, '($1) $2') : d;
 });
+// destaque da opção escolhida por classe (funciona também em navegadores antigos, sem :has)
+const radios = Array.from(form.querySelectorAll('input[type=radio]'));
+const marcar = () => radios.forEach((r) => r.closest('label').classList.toggle('marcado', r.checked));
+radios.forEach((r) => r.addEventListener('change', marcar)); marcar();
 const regras = {
   nome: (v) => v.trim().length >= 3,
   fone: (v) => v.replace(/\D/g, '').length >= 10,
