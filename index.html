@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café de Negócios iBPO · 27/11, Itatiba</title>
+<meta name="description" content="Um café entre empresários de Itatiba para falar de negócios. Sexta, 27/11, às 9h, no Office Tower. Vagas limitadas: confirme sua presença.">
+<meta name="theme-color" content="#0F1A44">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Café de Negócios iBPO · Sexta, 27/11, às 9h">
+<meta property="og:description" content="Empresário de Itatiba, este convite é para você. Vagas limitadas: confirme sua presença.">
+<meta property="og:image" content="https://tecnologia820.github.io/cafe-de-negocios/banner.png">
+<meta property="og:url" content="https://tecnologia820.github.io/cafe-de-negocios/">
+<link rel="icon" href="logo-ibpo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--marinho:#0F1A44;--apoio:#1B2A6B;--azul:#2F4FF5;--claro:#C3D0FF;--branco:#fff;--tinta:#0F1A44;--cinza:#5A648C;--erro:#C62828}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--marinho);color:var(--branco);font-family:Inter,system-ui,Arial,sans-serif;font-size:17px;line-height:1.5;min-height:100vh;position:relative;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:56px 56px}
+.faixa{position:absolute;right:-150px;top:-300px;width:360px;height:420px;border-radius:56px;background:linear-gradient(135deg,#2B4AF2,#3559FD);transform:rotate(12deg);opacity:.9}
+main{position:relative;max-width:560px;margin:0 auto;padding:28px 20px 56px}
+.topo{display:flex;align-items:center;justify-content:space-between;margin-bottom:44px}
+.topo img{width:132px;height:auto;display:block}
+.selo{font:700 13px Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--marinho);background:var(--branco);padding:9px 14px;border-radius:999px;white-space:nowrap}
+.tag{font:700 13px/1.5 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--claro)}
+h1{font:800 clamp(46px,14vw,72px)/1 Montserrat,sans-serif;letter-spacing:-.025em;margin:14px 0 20px}
+.tema{display:inline-block;background:var(--branco);color:var(--tinta);font:800 clamp(19px,5.6vw,26px)/1.15 Montserrat,sans-serif;letter-spacing:-.01em;padding:11px 18px 13px;border-radius:14px;transform:rotate(-1.5deg)}
+.lead{margin-top:26px;font-size:18px;color:#E6EBFF;max-width:30em}
+.cartao{margin-top:28px;border-radius:24px;padding:26px 24px;background:linear-gradient(135deg,#2B4AF2,#3559FD);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.cartao .quando{font:800 clamp(30px,9vw,42px)/1.08 Montserrat,sans-serif;letter-spacing:-.02em;margin:6px 0 10px}
+.cartao .onde{font-weight:600;font-size:20px}
+.cartao .rua{font-size:16px;margin-top:2px}
+.cartao a{display:inline-block;margin-top:14px;color:var(--branco);font-weight:600;font-size:15px;text-underline-offset:4px}
+.cartao .tag{color:var(--branco)}
+.ir{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;min-height:60px;border-radius:999px;background:var(--branco);color:var(--tinta);font:800 19px Montserrat,sans-serif;text-decoration:none;transition:transform .15s}
+.ir:active{transform:scale(.98)}
+h2{font:800 clamp(28px,8vw,36px)/1.08 Montserrat,sans-serif;letter-spacing:-.02em}
+section{margin-top:56px}
+.ficha{margin-top:20px;background:var(--branco);color:var(--tinta);border-radius:24px;padding:26px 22px 24px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.campo{margin-bottom:18px}
+label,.rotulo{display:block;font-weight:600;font-size:15px;margin-bottom:7px}
+.opc{font-weight:400;color:var(--cinza)}
+input[type=text],input[type=tel],input[type=email]{width:100%;height:56px;border-radius:14px;border:2px solid #D5DBF5;background:#F6F8FF;padding:0 16px;font:400 17px Inter,sans-serif;color:var(--tinta);outline:none;transition:border-color .15s,box-shadow .15s}
+input::placeholder{color:#9AA3C7}
+input:focus-visible{border-color:var(--azul);box-shadow:0 0 0 4px rgba(47,79,245,.18);background:#fff}
+.campo.ruim input{border-color:var(--erro)}
+.aviso{display:none;color:var(--erro);font-size:14px;margin-top:6px}
+.campo.ruim .aviso{display:block}
+.escolha{display:grid;gap:10px}
+.escolha label{position:relative;display:flex;align-items:center;gap:12px;min-height:58px;padding:10px 16px;border-radius:14px;border:2px solid #D5DBF5;background:#F6F8FF;font-weight:600;font-size:16px;margin:0;cursor:pointer;transition:border-color .15s,background .15s}
+.escolha input{position:absolute;opacity:0;pointer-events:none}
+.escolha .bola{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #9AA3C7;display:grid;place-items:center}
+.escolha label:has(input:checked){border-color:var(--azul);background:#E9EEFF}
+.escolha label:has(input:checked) .bola{border-color:var(--azul)}
+.escolha label:has(input:checked) .bola::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--azul)}
+.escolha label:has(input:focus-visible){box-shadow:0 0 0 4px rgba(47,79,245,.18)}
+button{width:100%;min-height:62px;margin-top:8px;border:0;border-radius:999px;background:linear-gradient(135deg,#2B4AF2,#3559FD);color:#fff;font:800 19px Montserrat,sans-serif;cursor:pointer;transition:transform .15s,opacity .15s}
+button:active{transform:scale(.98)}
+button[disabled]{opacity:.6;cursor:wait}
+.nota{margin-top:14px;font-size:13px;color:var(--cinza);text-align:center}
+.falha{display:none;margin-top:14px;padding:12px 14px;border-radius:12px;background:#FDECEC;color:var(--erro);font-size:15px}
+.ok{display:none;text-align:center;padding:10px 4px 4px}
+.ok .check{width:76px;height:76px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,#2B4AF2,#3559FD);display:grid;place-items:center}
+.ok h3{font:800 28px/1.1 Montserrat,sans-serif;letter-spacing:-.02em}
+.ok p{margin-top:12px;color:#39426B}
+.ok .resumo{margin-top:18px;padding:16px;border-radius:14px;background:#F0F3FF;font-weight:600}
+.enviado form{display:none}.enviado .ok{display:block}
+.video{margin-top:20px;border-radius:24px;overflow:hidden;background:#000;box-shadow:0 24px 60px rgba(0,0,0,.35);max-width:360px;margin-left:auto;margin-right:auto}
+video{display:block;width:100%;height:auto;aspect-ratio:9/16}
+footer{margin-top:56px;text-align:center;color:var(--claro);font-size:14px}
+footer img{width:120px;height:auto;display:block;margin:0 auto 12px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="faixa" aria-hidden="true"></div>
+<main>
+  <header class="topo">
+    <img src="logo-ibpo.png" alt="iBPO Terceirização Financeira" width="132" height="55">
+    <span class="selo">Vagas limitadas</span>
+  </header>
+
+  <p class="tag">Empresário de Itatiba, este convite é para você</p>
+  <h1>Café de Negócios</h1>
+  <div class="tema">O preço de fazer tudo sozinho</div>
+  <p class="lead">Uma manhã para falar de negócios, de empresário para empresário. Na pauta, o que muda para a sua empresa com a reforma tributária.</p>
+
+  <div class="cartao">
+    <p class="tag">Quando e onde</p>
+    <p class="quando">Sexta, 27/11 · 9h</p>
+    <p class="onde">Office Tower · Itatiba</p>
+    <p class="rua">Rua Piza e Almeida, 452 · 11º andar · sala 111</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Piza+e+Almeida+452+Itatiba+SP" target="_blank" rel="noopener">Ver no mapa</a>
+  </div>
+  <a class="ir" href="#inscricao">Garantir minha vaga</a>
+
+  <section id="inscricao">
+    <p class="tag">Inscrição</p>
+    <h2>Confirme sua presença</h2>
+    <div class="ficha" id="ficha">
+      <form id="form" novalidate>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="entry.178441063" type="text" autocomplete="name" placeholder="Como você se chama" required>
+          <p class="aviso">Informe o seu nome.</p>
+        </div>
+        <div class="campo">
+          <label for="fone">Telefone / WhatsApp</label>
+          <input id="fone" name="entry.1798842652" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000" required>
+          <p class="aviso">Informe um telefone com DDD.</p>
+        </div>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input id="email" name="entry.390195315" type="email" inputmode="email" autocomplete="email" placeholder="voce@suaempresa.com.br" required>
+          <p class="aviso">Informe um e-mail válido.</p>
+        </div>
+        <div class="campo">
+          <label for="empresa">Empresa <span class="opc">(opcional)</span></label>
+          <input id="empresa" name="entry.290247692" type="text" autocomplete="organization" placeholder="Nome da sua empresa">
+        </div>
+        <div class="campo" id="campo-presenca">
+          <span class="rotulo" id="rot-presenca">Você confirma presença na sexta, 27/11, às 9h?</span>
+          <div class="escolha" role="radiogroup" aria-labelledby="rot-presenca">
+            <label><input type="radio" name="entry.1148831232" value="Sim, estarei lá" checked><span class="bola"></span>Sim, estarei lá</label>
+            <label><input type="radio" name="entry.1148831232" value="Ainda não tenho certeza"><span class="bola"></span>Ainda não tenho certeza</label>
+          </div>
+        </div>
+        <button type="submit" id="enviar">Confirmar minha presença</button>
+        <p class="falha" id="falha">Não foi possível enviar agora. Confira a sua conexão e toque de novo.</p>
+        <p class="nota">Seus dados são usados só para a organização deste evento.</p>
+      </form>
+      <div class="ok" id="ok" tabindex="-1">
+        <div class="check" aria-hidden="true"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h3 id="ok-titulo">Presença confirmada</h3>
+        <p id="ok-texto">Sua vaga está reservada. Esperamos você para o café.</p>
+        <p class="resumo">Sexta, 27/11, às 9h<br>Office Tower, Itatiba · 11º andar, sala 111</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="tag">O convite</p>
+    <h2>Assista ao vídeo</h2>
+    <div class="video">
+      <video controls playsinline preload="none" poster="capa-video.jpg">
+        <source src="convite.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <footer>
+    <img src="logo-ibpo.png" alt="iBPO Terceirização Financeira" width="120" height="50">
+    Um convite da iBPO para os empresários de Itatiba.
+  </footer>
+</main>
+<script>
+// A página grava as respostas no formulário do Google (conta da iBPO); a pessoa não sai daqui.
+const DESTINO = 'https://docs.google.com/forms/d/e/1FAIpQLSdr2J_vDOl-nRYPP8oCjCLQXy1ZGK_PCvl_tkCZOaTxvRSKNg/formResponse';
+const form = document.getElementById('form'), fone = document.getElementById('fone');
+fone.addEventListener('input', () => {
+  const d = fone.value.replace(/\D/g, '').slice(0, 11);
+  fone.value = d.length > 10 ? d.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3')
+    : d.length > 6 ? d.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3')
+    : d.length > 2 ? d.replace(/(\d{2})(\d{0,5})/, '($1) $2') : d;
+});
+const regras = {
+  nome: (v) => v.trim().length >= 3,
+  fone: (v) => v.replace(/\D/g, '').length >= 10,
+  email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+};
+function conferir(id) {
+  const el = document.getElementById(id), ok = regras[id](el.value);
+  el.closest('.campo').classList.toggle('ruim', !ok); el.setAttribute('aria-invalid', String(!ok)); return ok;
+}
+Object.keys(regras).forEach((id) => {
+  const el = document.getElementById(id);
+  el.addEventListener('blur', () => conferir(id));
+  el.addEventListener('input', () => { if (el.closest('.campo').classList.contains('ruim')) conferir(id); });
+});
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const ruins = Object.keys(regras).filter((id) => !conferir(id));
+  if (ruins.length) { document.getElementById(ruins[0]).focus(); return; }
+  const bt = document.getElementById('enviar'), falha = document.getElementById('falha');
+  bt.disabled = true; bt.textContent = 'Enviando...'; falha.style.display = 'none';
+  try {
+    await fetch(DESTINO, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) });
+    if (form.querySelector('input[type=radio]:checked').value !== 'Sim, estarei lá') {
+      document.getElementById('ok-titulo').textContent = 'Inscrição recebida';
+      document.getElementById('ok-texto').textContent = 'Guardamos o seu contato. Se puder vir, é só aparecer: vamos adorar receber você.';
+    }
+    document.getElementById('ficha').classList.add('enviado');
+    document.getElementById('ok').focus();
+  } catch (err) {
+    falha.style.display = 'block'; bt.disabled = false; bt.textContent = 'Confirmar minha presença';
+  }
+});
+</script>
+</body>
+</html>
